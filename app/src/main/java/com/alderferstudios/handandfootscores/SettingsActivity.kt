@@ -169,7 +169,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                         editor?.apply()
                     }
 
-                    p.summary = "$resources.getString(R.string.clean_book_desc) $shared?.getString('cleanBook', '500')"
+                    p.summary = resources.getString(R.string.clean_book_desc) + " " + shared?.getString("cleanBook", "500")
                 }
             }
         }
@@ -188,7 +188,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                         editor?.apply()
                     }
 
-                    p.summary = "$resources.getString(R.string.dirty_book_desc) $shared?.getString('dirtyBook', '300')"
+                    p.summary = resources.getString(R.string.dirty_book_desc) + " " + shared?.getString("dirtyBook", "300")
                 }
             }
         }
@@ -207,7 +207,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                         editor?.apply()
                     }
 
-                    p.summary = "$resources.getString(R.string.clean_wild_desc) $shared?.getString('cleanWildBook', '1500')"
+                    p.summary = resources.getString(R.string.clean_wild_desc) + " " + shared?.getString("cleanWildBook", "1500")
                 }
             }
         }
@@ -226,7 +226,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                         editor?.apply()
                     }
 
-                    p.summary = "$resources.getString(R.string.dirty_wild_desc) $shared?.getString('dirtyWildBook', '1300')"
+                    p.summary = resources.getString(R.string.dirty_wild_desc) + " " + shared?.getString("dirtyWildBook", "1300")
                 }
             }
         }
@@ -245,7 +245,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                         editor?.apply()
                     }
 
-                    p.summary = "$resources.getString(R.string.red_three_desc) -Math.abs(Integer.parseInt($shared?.getString('redThree', '300')))"
+                    p.summary = resources.getString(R.string.red_three_desc) + " -" + Math.abs(Integer.parseInt(shared?.getString("redThree", "300")))
                 }
             }
         }
@@ -264,7 +264,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                         editor?.apply()
                     }
 
-                    p.summary = "$resources.getString(R.string.black_three_desc) -Math.abs(Integer.parseInt($shared?.getString('blackThree', '100')))"
+                    p.summary = resources.getString(R.string.black_three_desc) + " -" + Math.abs(Integer.parseInt(shared?.getString("blackThree", "100")))
                 }
             }
         }
@@ -283,7 +283,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                         editor?.apply()
                     }
 
-                    p.summary = "$resources.getString(R.string.four_nine_desc) -Math.abs(Integer.parseInt($shared?.getString('fourNine', '5')))"
+                    p.summary = resources.getString(R.string.four_nine_desc) + " -" + Math.abs(Integer.parseInt(shared?.getString("fourNine", "5")))
                 }
             }
         }
@@ -302,7 +302,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                         editor?.apply()
                     }
 
-                    p.summary = "$resources.getString(R.string.ten_king_desc) -Math.abs(Integer.parseInt($shared?.getString('tenKing', '10')))"
+                    p.summary = resources.getString(R.string.ten_king_desc) + " -" + Math.abs(Integer.parseInt(shared?.getString("tenKing", "10")))
                 }
             }
         }
@@ -321,7 +321,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                         editor?.apply()
                     }
 
-                    p.summary = "$resources.getString(R.string.ace_two_desc) -Math.abs(Integer.parseInt($shared?.getString('aceTwo', '20')))"
+                    p.summary = resources.getString(R.string.ace_two_desc) + " -" + Math.abs(Integer.parseInt(shared?.getString("aceTwo", "20")))
                 }
             }
         }
@@ -340,7 +340,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                         editor?.apply()
                     }
 
-                    p.summary = "$resources.getString(R.string.joker_desc) -Math.abs(Integer.parseInt($shared?.getString('joker', '50')))"
+                    p.summary = resources.getString(R.string.joker_desc) + " -" + Math.abs(Integer.parseInt(shared?.getString("joker", "50")))
                 }
             }
         }
@@ -359,7 +359,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                         editor?.apply()
                     }
 
-                    p.summary = "$resources.getString(R.string.win_desc) $shared?.getString('winBonus', '300')"
+                    p.summary = resources.getString(R.string.win_desc) + " " + shared?.getString("winBonus", "300")
                 }
             }
         }
