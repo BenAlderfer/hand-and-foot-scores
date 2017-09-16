@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="prefScreen1">
+
+    <EditTextPreference
+        android:defaultValue="500"
+        android:inputType="number"
+        android:key="cleanbook"
+        android:summary="@string/clean_book_desc"
+        android:title="@string/clean_book_label" />
+
+    <EditTextPreference
+        android:defaultValue="300"
+        android:inputType="number"
+        android:key="dirtybook"
+        android:summary="@string/dirty_book_desc"
+        android:title="@string/dirty_book_label" />
+
+    <EditTextPreference
+        android:defaultValue="1500"
+        android:inputType="number"
+        android:key="cleanwildbook"
+        android:summary="@string/clean_wild_desc"
+        android:title="@string/clean_wild_label" />
+
+    <EditTextPreference
+        android:defaultValue="1300"
+        android:inputType="number"
+        android:key="dirtywildbook"
+        android:summary="@string/dirty_wild_desc"
+        android:title="@string/dirty_wild_label" />
+
+    <EditTextPreference
+        android:defaultValue="300"
+        android:inputType="number"
+        android:key="redthree"
+        android:summary="@string/red_three_desc"
+        android:title="@string/red_three_label" />
+
+    <EditTextPreference
+        android:defaultValue="100"
+        android:inputType="number"
+        android:key="blackthree"
+        android:summary="@string/black_three_desc"
+        android:title="@string/black_three_label" />
+
+</PreferenceScreen>

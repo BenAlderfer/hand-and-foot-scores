@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <!-- Books section -->
+        <TextView
+            android:id="@+id/books"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/book_header"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <View
+            android:id="@+id/bookline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/books"
+            android:background="@color/bluePrimaryDark" />
+
+        <TextView
+            android:id="@+id/clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/bookline"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/clean_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <EditText
+            android:id="@+id/numcleanbooks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/clean"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/additional"
+            android:layout_toRightOf="@+id/additional"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <TextView
+            android:id="@+id/dirty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/clean"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/dirty_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <EditText
+            android:id="@+id/numdirtybooks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/dirty"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/additional"
+            android:layout_toRightOf="@+id/additional"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <TextView
+            android:id="@+id/cleanwild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dirty"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/clean_wild_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <EditText
+            android:id="@+id/numcleanwildbooks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/cleanwild"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/additional"
+            android:layout_toRightOf="@+id/additional"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <TextView
+            android:id="@+id/dirtywild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/cleanwild"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/dirty_wild_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <EditText
+            android:id="@+id/numdirtywildbooks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/dirtywild"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/additional"
+            android:layout_toRightOf="@+id/additional"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <!-- 3's section -->
+        <TextView
+            android:id="@+id/threes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dirtywild"
+            android:layout_marginTop="@dimen/section_margin"
+            android:text="@string/three_header"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <View
+            android:id="@+id/threeline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/threes"
+            android:background="@color/bluePrimaryDark" />
+
+        <TextView
+            android:id="@+id/redthree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/threeline"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/red_three_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <EditText
+            android:id="@+id/numredthrees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/redthree"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/additional"
+            android:layout_toRightOf="@+id/additional"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <TextView
+            android:id="@+id/blackthree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/redthree"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/black_three_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <EditText
+            android:id="@+id/numblackthrees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/blackthree"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/additional"
+            android:layout_toRightOf="@+id/additional"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <!-- Additional point section -->
+        <TextView
+            android:id="@+id/additional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/blackthree"
+            android:layout_marginTop="@dimen/section_margin"
+            android:text="@string/additional_header"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <View
+            android:id="@+id/leftoverline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/additional"
+            android:background="@color/bluePrimaryDark" />
+
+        <TextView
+            android:id="@+id/fournine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/leftoverline"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/four_nine_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <EditText
+            android:id="@+id/numfournine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/fournine"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/additional"
+            android:layout_toRightOf="@+id/additional"
+            android:inputType="number|numberSigned"
+            android:maxLength="4"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <TextView
+            android:id="@+id/tenking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fournine"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/ten_king_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <EditText
+            android:id="@+id/numtenking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tenking"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/additional"
+            android:layout_toRightOf="@+id/additional"
+            android:inputType="number|numberSigned"
+            android:maxLength="4"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <TextView
+            android:id="@+id/acetwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tenking"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/ace_two_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <EditText
+            android:id="@+id/numacetwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/acetwo"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/additional"
+            android:layout_toRightOf="@+id/additional"
+            android:inputType="number|numberSigned"
+            android:maxLength="4"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <TextView
+            android:id="@+id/jokers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/acetwo"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/joker_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <EditText
+            android:id="@+id/numjokers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/jokers"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/additional"
+            android:layout_toRightOf="@+id/additional"
+            android:inputType="number|numberSigned"
+            android:maxLength="4"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <TextView
+            android:id="@+id/extrapoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/jokers"
+            android:layout_marginTop="@dimen/between_margin"
+            android:text="@string/extra_points_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <EditText
+            android:id="@+id/numextrapoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/extrapoints"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@+id/additional"
+            android:layout_toRightOf="@+id/additional"
+            android:inputType="number|numberSigned"
+            android:maxLength="4"
+            android:textColor="@color/bluePrimaryDark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/extrapoints"
+            android:layout_marginTop="@dimen/section_margin"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                android:id="@+id/lostbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:background="@drawable/blue_button"
+                android:onClick="lostRound"
+                android:padding="@dimen/button_padding"
+                android:text="@string/lost_round"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/wonbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:background="@drawable/blue_button"
+                android:onClick="wonRound"
+                android:padding="@dimen/button_padding"
+                android:text="@string/won_round"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

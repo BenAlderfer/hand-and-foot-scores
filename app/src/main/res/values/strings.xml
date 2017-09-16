@@ -1,0 +1,101 @@
+<resources>
+
+    <string name="app_name">Hand and Foot Scores</string>
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_instructions">Instructions</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_about">About</string>
+    <string name="action_help">Help</string>
+    <string name="action_about">About</string>
+
+    <string name="team1">Team 1</string>
+    <string name="team2">Team 2</string>
+    <string name="team3">Team 3</string>
+    <string name="team4">Team 4</string>
+
+    <string name="point_header">Points:</string>
+    <string name="book_header">Books</string>
+    <string name="clean_title">Clean Books</string>
+    <string name="dirty_title">Dirty Books</string>
+    <string name="clean_wild_title">Clean Wild Books</string>
+    <string name="dirty_wild_title">Dirty Wild Books</string>
+
+    <string name="three_header">3\'s</string>
+    <string name="red_three_title">Red 3\'s</string>
+    <string name="black_three_title">Black 3\'s</string>
+
+    <string name="additional_header">Additional Points</string>
+    <string name="four_nine_title">4\'s-9\'s</string>
+    <string name="ten_king_title">10\'s-Kings</string>
+    <string name="ace_two_title">Aces and 2\'s</string>
+    <string name="joker_title">Jokers</string>
+    <string name="extra_points_title">Extra Points</string>
+
+    <string name="lost_round">Lost Round</string>
+    <string name="won_round">Won Round</string>
+
+    <!-- preference section -->
+    <string name="clean_book_label">Clean book value</string>
+    <string name="clean_book_desc">The current value of a clean book is: </string>
+
+    <string name="dirty_book_label">Dirty book value</string>
+    <string name="dirty_book_desc">The current value of a dirty book is: </string>
+
+    <string name="clean_wild_label">Clean wild book value</string>
+    <string name="clean_wild_desc">The current value of a clean wild book is: </string>
+
+    <string name="dirty_wild_label">Dirty wild book value</string>
+    <string name="dirty_wild_desc">The current value of a dirty wild book is: </string>
+
+    <string name="red_three_label">Red 3 value</string>
+    <string name="red_three_desc">The current value of a red 3 is: </string>
+
+    <string name="black_three_label">Black 3 value</string>
+    <string name="black_three_desc">The current value of a black 3 is: </string>
+
+    <string name="four_nine_label">4s - 9s value</string>
+    <string name="four_nine_desc">The current value of 4\'s - 9\'s is: </string>
+
+    <string name="ten_king_label">10s - Kings value</string>
+    <string name="ten_king_desc">The current value of 10\'s - Kings is: </string>
+
+    <string name="ace_two_label">Aces and Twos value</string>
+    <string name="ace_two_desc">The current value of Aces and 2\'s is: </string>
+
+    <string name="joker_label">Joker value</string>
+    <string name="joker_desc">The current value of a Joker is: </string>
+
+    <string name="win_label">Winning bonus</string>
+    <string name="win_desc">The current bonus for winning is: </string>
+
+    <!-- Do not add spacing to these or they will not line up correctly -->
+    <string name="setup_title">Setup</string>
+    <string name="setup_text">&#8226; Usually two teams of 2+ people\n&#8226; 1 more deck than the number of people needed\n&#8226; Each person gets two sets of 11 cards\n&#8226; One set is your hand, the other is your foot and is hidden\n&#8226; Remaining cards are placed in the middle, top card is flipped and starts discard pile\n&#8226; If the first card is a red three or a wild card (two or joker) it is randomly placed into the deck and a new card is drawn\n&#8226; The player to the left of the dealer goes first</string>
+
+    <string name="objective_title">Objective</string>
+    <string name="objective_text">&#8226; Cards are placed into books\n&#8226; Books need three cards to start\n&#8226; All players can contribute to their team’s books\n&#8226; Before you can add to books, you must “lay down”\n&#8226; To “lay down” you must place enough cards into books at once to satisfy the round requirement (bonuses do not count)\n&#8226; Typically the first round requires 75 points and each additional round requires an additional 25 points\n&#8226; Each player must “lay down” at the start of every round before they can place any cards\n&#8226; Twos and jokers can be used as wild cards, as long as there are more regular cards than wild cards in the book, but they dirty the book\n&#8226; Books can be made of only wild cards for additional points\n&#8226; A clean book contains no wild cards\n&#8226; A dirty book contains wild cards\n&#8226; A wild book contains only wild cards\n&#8226; The number of books is unlimited\n&#8226; When a book contains 7 cards, it is complete and can be set aside with a red card on top if it is a clean book or a black card on top if it is a dirty book\n&#8226; To end the round, you must complete at least two dirty books and three clean books</string>
+
+    <string name="play_title">Play</string>
+    <string name="play_text">&#8226; At the beginning of the turn, the player either draws two cards, or, if they have two of the top card on the discard pile and have laid down, they can take the top five cards on the discard pile and they must then place the three of a kind in a current or new book\n&#8226; If the entire hand is used during the turn, the player can pick up the foot and continue playing\n&#8226; At the end of the turn, the player discards one card\n&#8226; Once the card has been placed, the turn is over and they cannot take the card back\n&#8226; A player cannot discard their last card if they have not met the requirements for ending the round\n&#8226; If the deck runs out of cards during play, shuffle the discard pile and use that as the deck</string>
+
+    <string name="scoring_title">Scoring</string>
+    <string name="scoring_text">&#8226; Cards in books are added to the score\n&#8226; Cards in your hand and foot are removed from the score\n&#8226; Cancel out cards in your hand and foot with cards in books before calculating the score\n&#8226; 4 - 9: 5 points\n&#8226; 10 - King: 10 points\n&#8226; Ace or two: 20 points\n&#8226; Joker: 50 points\n&#8226; Black three: -100 points\n&#8226; Red three: -300 points\n&#8226; Completed books give additional points\n&#8226; Clean book: 500 points\n&#8226; Dirty book: 300 points\n&#8226; Clean wild book: 1500 points\n&#8226; Dirty wild book: 1300 points\n&#8226; 100 additional points for being the first to “lay down”</string>
+
+    <string name="title_activity_instruction">Instructions</string>
+
+    <!-- Help strings -->
+    <string name="actionButtons">Toolbar buttons:\n\n• Tap the three staggered lines to clear all saved data\n• Go to \"Instructions\" to learn how to play the game</string>
+    <string name="userFields">Data fields:\n\n• Enter all needed fields and then tap either \"Lost Round\" or \"Won Round\" to save the data\n• Fields can be left empty</string>
+    <string name="errorFields">If you have an error:\n\n• Please tap \"Report\" if you get an app crash dialog\n• It would also be helpful if you email <a href="mailto:alderferstudios@gmail.com">alderferstudios@gmail.com</a> with a bug report\n• If the app still crashes after an app update, try clearing the app\'s cache</string>
+
+    <!-- About strings -->
+    <string name="appInfo">Hand And Foot Scores by Alderfer Studios</string>
+    <string name="version">Version: </string>
+    <string name="versionInfo">Version: 0.0.0</string>
+    <string name="openSource">This app is open source. You can find it here: <a href="https://github.com/BenAlderfer/hand-and-foot-scores">https://github.com/BenAlderfer/hand-and-foot-scores</a></string>
+    <string name="translate">If you would like to translate this app, please email <a href="mailto:alderferstudios@gmail.com">alderferstudios@gmail.com</a> with your request and I will send you instructions.\n\nIf you already know how to do this, you can edit the strings.xml (\\app\\src\\main\\res\\values) file in the source and send it to the above email.</string>
+    <string name="contact">If you have any questions, bug reports, or suggestions, contact: <a href="mailto:alderferstudios@gmail.com">alderferstudios@gmail.com</a>\n\nPlease include your device and version of Android with any bug reports.\n\nIf you run into an error while using the app, please tap \"Report\" to send the error message to me.</string>
+    <string name="donate">If you would like to show your appreciation, here\'s how:\n\n• Donate to a charity - they probably need it more than me\n• Paypal or Venmo: benalderfer974@gmail.com</string>
+
+</resources>

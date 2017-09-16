@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="prefScreen">
+
+    <EditTextPreference
+        android:defaultValue="500"
+        android:inputType="number"
+        android:key="cleanBook"
+        android:summary="@string/clean_book_desc"
+        android:title="@string/clean_book_label" />
+
+    <EditTextPreference
+        android:defaultValue="300"
+        android:inputType="number"
+        android:key="dirtyBook"
+        android:summary="@string/dirty_book_desc"
+        android:title="@string/dirty_book_label" />
+
+    <EditTextPreference
+        android:defaultValue="1500"
+        android:inputType="number"
+        android:key="cleanWildBook"
+        android:summary="@string/clean_wild_desc"
+        android:title="@string/clean_wild_label" />
+
+    <EditTextPreference
+        android:defaultValue="1300"
+        android:inputType="number"
+        android:key="dirtyWildBook"
+        android:summary="@string/dirty_wild_desc"
+        android:title="@string/dirty_wild_label" />
+
+    <EditTextPreference
+        android:defaultValue="300"
+        android:inputType="number"
+        android:key="redThree"
+        android:summary="@string/red_three_desc"
+        android:title="@string/red_three_label" />
+
+    <EditTextPreference
+        android:defaultValue="100"
+        android:inputType="number"
+        android:key="blackThree"
+        android:summary="@string/black_three_desc"
+        android:title="@string/black_three_label" />
+
+    <EditTextPreference
+        android:defaultValue="5"
+        android:inputType="number"
+        android:key="fourNine"
+        android:summary="@string/four_nine_desc"
+        android:title="@string/four_nine_label" />
+
+    <EditTextPreference
+        android:defaultValue="10"
+        android:inputType="number"
+        android:key="tenKing"
+        android:summary="@string/ten_king_desc"
+        android:title="@string/ten_king_label" />
+
+    <EditTextPreference
+        android:defaultValue="20"
+        android:inputType="number"
+        android:key="aceTwo"
+        android:summary="@string/ace_two_desc"
+        android:title="@string/ace_two_label" />
+
+    <EditTextPreference
+        android:defaultValue="50"
+        android:inputType="number"
+        android:key="joker"
+        android:summary="@string/joker_desc"
+        android:title="@string/joker_label" />
+
+    <EditTextPreference
+        android:defaultValue="300"
+        android:inputType="number"
+        android:key="winBonus"
+        android:summary="@string/win_desc"
+        android:title="@string/win_label" />
+
+</PreferenceScreen>

@@ -1,0 +1,10 @@
+*.jks
+icon/
+cards/
+screens/
+.idea/
+.git/
+.gradle/
+build/
+*.iml
+local.properties

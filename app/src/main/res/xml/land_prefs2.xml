@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="prefScreen2">
+
+    <EditTextPreference
+        android:defaultValue="5"
+        android:inputType="number"
+        android:key="fourNine"
+        android:summary="@string/four_nine_desc"
+        android:title="@string/four_nine_label" />
+
+    <EditTextPreference
+        android:defaultValue="10"
+        android:inputType="number"
+        android:key="tenKing"
+        android:summary="@string/ten_king_desc"
+        android:title="@string/ten_king_label" />
+
+    <EditTextPreference
+        android:defaultValue="20"
+        android:inputType="number"
+        android:key="aceTwo"
+        android:summary="@string/ace_two_desc"
+        android:title="@string/ace_two_label" />
+
+    <EditTextPreference
+        android:defaultValue="50"
+        android:inputType="number"
+        android:key="joker"
+        android:summary="@string/joker_desc"
+        android:title="@string/joker_label" />
+
+    <EditTextPreference
+        android:defaultValue="300"
+        android:inputType="number"
+        android:key="winValue"
+        android:summary="@string/win_desc"
+        android:title="@string/win_label" />
+
+</PreferenceScreen>
