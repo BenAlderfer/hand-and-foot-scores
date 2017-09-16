@@ -46,7 +46,7 @@
 		<item name="android:colorAccent">@color/orangePrimary</item><!-- checkboxes and text fields border-->
 		<item name="android:textColorPrimary">@color/bluePrimary</item><!-- activity name text color -->
 		<item name="android:editTextStyle">@style/blueEditText</item><!-- EditText color -->
-		<item name="android:windowBackground">@color/bluePrimary</item><!-- background color -->
+        <item name="android:windowBackground">@color/lightgrey</item><!-- background color -->
 		<item name="android:textColor">@color/bluePrimary</item><!-- TextView color -->
 		<item name="android:actionMenuTextColor">@color/bluePrimary</item><!-- Action button color -->
 		<item name="android:textColorHighlight">@color/blueHighlight</item><!--  Highlight color -->
