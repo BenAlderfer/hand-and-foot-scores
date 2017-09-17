@@ -25,7 +25,7 @@
             android:textColor="@color/bluePrimaryDark" />
 
         <View
-            android:id="@+id/bookline"
+            android:id="@+id/bookLine"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@+id/books"
@@ -37,14 +37,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/bookline"
+            android:layout_below="@+id/bookLine"
             android:layout_marginTop="@dimen/between_margin"
             android:text="@string/clean_title"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/bluePrimaryDark" />
 
         <EditText
-            android:id="@+id/numcleanbooks"
+            android:id="@+id/numCleanBooks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/clean"
@@ -69,7 +69,7 @@
             android:textColor="@color/bluePrimaryDark" />
 
         <EditText
-            android:id="@+id/numdirtybooks"
+            android:id="@+id/numDirtyBooks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/dirty"
@@ -82,7 +82,7 @@
             android:textColor="@color/bluePrimaryDark" />
 
         <TextView
-            android:id="@+id/cleanwild"
+            android:id="@+id/cleanWild"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -94,10 +94,10 @@
             android:textColor="@color/bluePrimaryDark" />
 
         <EditText
-            android:id="@+id/numcleanwildbooks"
+            android:id="@+id/numCleanWildBooks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/cleanwild"
+            android:layout_alignBaseline="@id/cleanWild"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_toEndOf="@+id/additional"
@@ -107,22 +107,22 @@
             android:textColor="@color/bluePrimaryDark" />
 
         <TextView
-            android:id="@+id/dirtywild"
+            android:id="@+id/dirtyWild"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/cleanwild"
+            android:layout_below="@+id/cleanWild"
             android:layout_marginTop="@dimen/between_margin"
             android:text="@string/dirty_wild_title"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/bluePrimaryDark" />
 
         <EditText
-            android:id="@+id/numdirtywildbooks"
+            android:id="@+id/numDirtyWildBooks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/dirtywild"
+            android:layout_alignBaseline="@id/dirtyWild"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_toEndOf="@+id/additional"
@@ -138,36 +138,36 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/dirtywild"
+            android:layout_below="@+id/dirtyWild"
             android:layout_marginTop="@dimen/section_margin"
             android:text="@string/three_header"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/bluePrimaryDark" />
 
         <View
-            android:id="@+id/threeline"
+            android:id="@+id/threeLine"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@+id/threes"
             android:background="@color/bluePrimaryDark" />
 
         <TextView
-            android:id="@+id/redthree"
+            android:id="@+id/redThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/threeline"
+            android:layout_below="@+id/threeLine"
             android:layout_marginTop="@dimen/between_margin"
             android:text="@string/red_three_title"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/bluePrimaryDark" />
 
         <EditText
-            android:id="@+id/numredthrees"
+            android:id="@+id/numRedThrees"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/redthree"
+            android:layout_alignBaseline="@id/redThree"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_toEndOf="@+id/additional"
@@ -177,22 +177,22 @@
             android:textColor="@color/bluePrimaryDark" />
 
         <TextView
-            android:id="@+id/blackthree"
+            android:id="@+id/blackThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/redthree"
+            android:layout_below="@+id/redThree"
             android:layout_marginTop="@dimen/between_margin"
             android:text="@string/black_three_title"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/bluePrimaryDark" />
 
         <EditText
-            android:id="@+id/numblackthrees"
+            android:id="@+id/numBlackThrees"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/blackthree"
+            android:layout_alignBaseline="@id/blackThree"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_toEndOf="@+id/additional"
@@ -208,36 +208,36 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/blackthree"
+            android:layout_below="@+id/blackThree"
             android:layout_marginTop="@dimen/section_margin"
             android:text="@string/additional_header"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/bluePrimaryDark" />
 
         <View
-            android:id="@+id/leftoverline"
+            android:id="@+id/leftOverLine"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@+id/additional"
             android:background="@color/bluePrimaryDark" />
 
         <TextView
-            android:id="@+id/fournine"
+            android:id="@+id/fourNine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/leftoverline"
+            android:layout_below="@+id/leftOverLine"
             android:layout_marginTop="@dimen/between_margin"
             android:text="@string/four_nine_title"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/bluePrimaryDark" />
 
         <EditText
-            android:id="@+id/numfournine"
+            android:id="@+id/numFourNine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/fournine"
+            android:layout_alignBaseline="@id/fourNine"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_toEndOf="@+id/additional"
@@ -247,22 +247,22 @@
             android:textColor="@color/bluePrimaryDark" />
 
         <TextView
-            android:id="@+id/tenking"
+            android:id="@+id/tenKing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/fournine"
+            android:layout_below="@+id/fourNine"
             android:layout_marginTop="@dimen/between_margin"
             android:text="@string/ten_king_title"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/bluePrimaryDark" />
 
         <EditText
-            android:id="@+id/numtenking"
+            android:id="@+id/numTenKing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/tenking"
+            android:layout_alignBaseline="@id/tenKing"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_toEndOf="@+id/additional"
@@ -272,22 +272,22 @@
             android:textColor="@color/bluePrimaryDark" />
 
         <TextView
-            android:id="@+id/acetwo"
+            android:id="@+id/aceTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/tenking"
+            android:layout_below="@+id/tenKing"
             android:layout_marginTop="@dimen/between_margin"
             android:text="@string/ace_two_title"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/bluePrimaryDark" />
 
         <EditText
-            android:id="@+id/numacetwo"
+            android:id="@+id/numAceTwo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/acetwo"
+            android:layout_alignBaseline="@id/aceTwo"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_toEndOf="@+id/additional"
@@ -302,14 +302,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/acetwo"
+            android:layout_below="@+id/aceTwo"
             android:layout_marginTop="@dimen/between_margin"
             android:text="@string/joker_title"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/bluePrimaryDark" />
 
         <EditText
-            android:id="@+id/numjokers"
+            android:id="@+id/numJokers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/jokers"
@@ -322,7 +322,7 @@
             android:textColor="@color/bluePrimaryDark" />
 
         <TextView
-            android:id="@+id/extrapoints"
+            android:id="@+id/extraPoints"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -334,10 +334,10 @@
             android:textColor="@color/bluePrimaryDark" />
 
         <EditText
-            android:id="@+id/numextrapoints"
+            android:id="@+id/numExtraPoints"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/extrapoints"
+            android:layout_alignBaseline="@id/extraPoints"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_toEndOf="@+id/additional"
@@ -349,13 +349,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/extrapoints"
+            android:layout_below="@+id/extraPoints"
             android:layout_marginTop="@dimen/section_margin"
             android:gravity="center"
             android:weightSum="10">
 
             <Button
-                android:id="@+id/lostbutton"
+                android:id="@+id/lostButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
@@ -369,7 +369,7 @@
                 android:textColor="@color/white" />
 
             <Button
-                android:id="@+id/wonbutton"
+                android:id="@+id/wonButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"

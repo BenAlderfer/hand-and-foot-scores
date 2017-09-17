@@ -55,17 +55,17 @@ class ScoreFragment : Fragment() {
         get() {
             val ets = arrayOfNulls<EditText>(11)
             try {
-                ets[0] = view?.findViewById(R.id.numcleanbooks)
-                ets[1] = view?.findViewById(R.id.numdirtybooks)
-                ets[2] = view?.findViewById(R.id.numcleanwildbooks)
-                ets[3] = view?.findViewById(R.id.numdirtywildbooks)
-                ets[4] = view?.findViewById(R.id.numredthrees)
-                ets[5] = view?.findViewById(R.id.numblackthrees)
-                ets[6] = view?.findViewById(R.id.numfournine)
-                ets[7] = view?.findViewById(R.id.numtenking)
-                ets[8] = view?.findViewById(R.id.numacetwo)
-                ets[9] = view?.findViewById(R.id.numjokers)
-                ets[10] = view?.findViewById(R.id.numextrapoints)
+                ets[0] = view?.findViewById(R.id.numCleanBooks)
+                ets[1] = view?.findViewById(R.id.numDirtyBooks)
+                ets[2] = view?.findViewById(R.id.numCleanWildBooks)
+                ets[3] = view?.findViewById(R.id.numDirtyWildBooks)
+                ets[4] = view?.findViewById(R.id.numRedThrees)
+                ets[5] = view?.findViewById(R.id.numBlackThrees)
+                ets[6] = view?.findViewById(R.id.numFourNine)
+                ets[7] = view?.findViewById(R.id.numTenKing)
+                ets[8] = view?.findViewById(R.id.numAceTwo)
+                ets[9] = view?.findViewById(R.id.numJokers)
+                ets[10] = view?.findViewById(R.id.numExtraPoints)
             } catch (e: NullPointerException) {
                 Log.e("Get Ets error", "Failed to fetch views")
             }

@@ -103,7 +103,7 @@ class ScoreActivity : AppCompatActivity() {
      * Creates the options menu
      *
      * @param menu the Menu
-     * @return always true (useless)
+     * @return always true
      */
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_score, menu)
