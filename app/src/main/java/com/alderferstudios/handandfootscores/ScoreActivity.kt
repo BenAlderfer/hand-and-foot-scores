@@ -1,5 +1,6 @@
 package com.alderferstudios.handandfootscores
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
@@ -23,22 +24,23 @@ import android.widget.ScrollView
  * Hand and Foot Scores
  * Main activity
  * Handles navigation, updating scores, clearing, etc...
+ * Some things are public for testing
  *
  * @author Ben Alderfer
  * Alderfer Studios
  */
 class ScoreActivity : AppCompatActivity() {
     companion object {
-        protected var shared: SharedPreferences? = null
+        var shared: SharedPreferences? = null
         protected var editor: SharedPreferences.Editor? = null
     }
 
-    private var tabNum: Int = 0
+    var tabNum: Int = 0
     private var tabLayout: TabLayout? = null
     private var viewPager: ViewPager? = null
     private var adapter: PagerAdapter? = null
 
-    private val ets = arrayOfNulls<Array<EditText?>>(4)                                                 //holds all the views, first dimension is tab number
+    val editTexts = arrayOfNulls<Array<EditText?>>(4)                                                 //holds all the views, first dimension is tab number
 
     /**
      * Creates the Activity and gets all the variables/listeners ready
@@ -50,7 +52,7 @@ class ScoreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_score)
 
         shared = PreferenceManager.getDefaultSharedPreferences(this)
-        PreferenceManager.setDefaultValues(this, R.xml.prefs, false)                             //sets default values if the preferences have not yet been used
+        resetPrefs(this, false)       //resets prefs only first time
         editor = shared?.edit()
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
@@ -100,6 +102,14 @@ class ScoreActivity : AppCompatActivity() {
     }
 
     /**
+     * Resets the prefs to their default values based on param
+     * @param reRead true: overwrite everything, false: only reset the first time this is called
+     */
+    fun resetPrefs(context: Context, reRead: Boolean) {
+        PreferenceManager.setDefaultValues(context, R.xml.prefs, reRead)
+    }
+
+    /**
      * Creates the options menu
      *
      * @param menu the Menu
@@ -119,7 +129,7 @@ class ScoreActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.action_clear_all -> {
-                if (ets[tabNum] == null) {
+                if (editTexts[tabNum] == null) {
                     saveEditTexts()
                 }
                 clearAll()
@@ -160,9 +170,9 @@ class ScoreActivity : AppCompatActivity() {
      * Used to minimize findViewById usage
      */
     private fun saveEditTexts() {
-        if (ets[tabNum] == null) {
+        if (editTexts[tabNum] == null) {
             val temp = adapter?.getItem(tabNum) as ScoreFragment?
-            ets[tabNum] = temp?.ets
+            editTexts[tabNum] = temp?.ets
         }
     }
 
@@ -182,79 +192,82 @@ class ScoreActivity : AppCompatActivity() {
 
     /**
      * Calculates the score
+     * Returns the score for testing
      *
      * @param bonus the bonus to add if they won
      */
-    private fun calculateScore(bonus: Int) {
+    fun calculateScore(bonus: Int): Int {
         var score = bonus
         saveEditTexts()
 
         //books
-        val numCleanBooks = ets[tabNum]?.get(0)?.text.toString()
+        val numCleanBooks = editTexts[tabNum]?.get(0)?.text.toString()
         if (numCleanBooks != "") {
             score += Math.abs(Integer.parseInt(numCleanBooks) * Integer.parseInt(shared?.getString("cleanBook", "500")))
         }
 
-        val numDirtyBooks = ets[tabNum]?.get(1)?.text.toString()
+        val numDirtyBooks = editTexts[tabNum]?.get(1)?.text.toString()
         if (numDirtyBooks != "") {
             score += Math.abs(Integer.parseInt(numDirtyBooks) * Integer.parseInt(shared?.getString("dirtyBook", "300")))
         }
 
-        val numCleanWildBooks = ets[tabNum]?.get(2)?.text.toString()
+        val numCleanWildBooks = editTexts[tabNum]?.get(2)?.text.toString()
         if (numCleanWildBooks != "") {
             score += Math.abs(Integer.parseInt(numCleanWildBooks) * Integer.parseInt(shared?.getString("cleanWildBook", "1500")))
         }
 
-        val numDirtyWildBooks = ets[tabNum]?.get(3)?.text.toString()
+        val numDirtyWildBooks = editTexts[tabNum]?.get(3)?.text.toString()
         if (numDirtyWildBooks != "") {
             score += Math.abs(Integer.parseInt(numDirtyWildBooks) * Integer.parseInt(shared?.getString("dirtyWildBook", "1300")))
         }
 
         //3's, three values are positive because they are being subtracted from score
         val redThreeValue = Math.abs(Integer.parseInt(shared?.getString("redThree", "300")))
-        val numRedThrees = ets[tabNum]?.get(4)?.text.toString()
+        val numRedThrees = editTexts[tabNum]?.get(4)?.text.toString()
         if (numRedThrees != "") {
             score -= Math.abs(Integer.parseInt(numRedThrees) * redThreeValue)
         }
 
         val blackThreeValue = Math.abs(Integer.parseInt(shared?.getString("blackThree", "100")))
-        val numBlackThrees = ets[tabNum]?.get(5)?.text.toString()
+        val numBlackThrees = editTexts[tabNum]?.get(5)?.text.toString()
         if (numBlackThrees != "") {
             score -= Math.abs(Integer.parseInt(numBlackThrees) * blackThreeValue)
         }
 
         //additional points
         val fourNineValue = Math.abs(Integer.parseInt(shared?.getString("fourNine", "5")))
-        val numFourNines = ets[tabNum]?.get(6)?.text.toString()
+        val numFourNines = editTexts[tabNum]?.get(6)?.text.toString()
         if (numFourNines != "") {
             score += Integer.parseInt(numFourNines) * fourNineValue
         }
 
         val tenKingValue = Math.abs(Integer.parseInt(shared?.getString("tenKing", "10")))
-        val numTenKings = ets[tabNum]?.get(7)?.text.toString()
+        val numTenKings = editTexts[tabNum]?.get(7)?.text.toString()
         if (numTenKings != "") {
             score += Integer.parseInt(numTenKings) * tenKingValue
         }
 
         val aceTwoValue = Math.abs(Integer.parseInt(shared?.getString("aceTwo", "20")))
-        val numAceTwos = ets[tabNum]?.get(8)?.text.toString()
+        val numAceTwos = editTexts[tabNum]?.get(8)?.text.toString()
         if (numAceTwos != "") {
             score += Integer.parseInt(numAceTwos) * aceTwoValue
         }
 
         val jokerValue = Math.abs(Integer.parseInt(shared?.getString("joker", "50")))
-        val numJokers = ets[tabNum]?.get(9)?.text.toString()
+        val numJokers = editTexts[tabNum]?.get(9)?.text.toString()
         if (numJokers != "") {
             score += Integer.parseInt(numJokers) * jokerValue
         }
 
-        val numExtraPoints = ets[tabNum]?.get(10)?.text.toString()
+        val numExtraPoints = editTexts[tabNum]?.get(10)?.text.toString()
         if (numExtraPoints != "") {
             score += Integer.parseInt(numExtraPoints)
         }
 
         updateFragment(score)
         clearEditTexts(tabNum)
+
+        return score
     }
 
     /**
@@ -281,11 +294,11 @@ class ScoreActivity : AppCompatActivity() {
      * @param tabNumber the number of the tab to clear its EditTexts
      */
     private fun clearEditTexts(tabNumber: Int) {
-        ets[tabNumber]?.forEach {
+        editTexts[tabNumber]?.forEach {
             it?.setText("")
         }
 
-        ets[tabNumber]?.get(0)?.requestFocus()
+        editTexts[tabNumber]?.get(0)?.requestFocus()
     }
 
     /**
@@ -295,7 +308,7 @@ class ScoreActivity : AppCompatActivity() {
     private fun clearAll() {
         var temp: ScoreFragment?
         for (i in 0..3) {
-            if (ets[i] != null) {
+            if (editTexts[i] != null) {
                 clearEditTexts(i)
                 temp = adapter?.getItem(i) as ScoreFragment?
                 temp?.score = 0
@@ -307,7 +320,7 @@ class ScoreActivity : AppCompatActivity() {
                 }
 
                 temp?.getScrollView()?.fullScroll(ScrollView.FOCUS_UP)
-                ets[i]?.get(0)?.requestFocus()
+                editTexts[i]?.get(0)?.requestFocus()
             }
         }
     }

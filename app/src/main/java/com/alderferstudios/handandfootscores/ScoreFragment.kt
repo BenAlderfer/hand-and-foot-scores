@@ -49,7 +49,7 @@ class ScoreFragment : Fragment() {
     /**
      * Gets the EditTexts in this Fragment and returns them
      *
-     * @return ets the array of EditTexts
+     * @return editTexts the array of EditTexts
      */
     val ets: Array<EditText?>
         get() {
