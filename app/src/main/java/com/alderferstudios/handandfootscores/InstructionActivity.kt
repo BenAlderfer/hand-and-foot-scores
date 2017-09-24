@@ -128,8 +128,8 @@ class InstructionActivity : AppCompatActivity() {
 
         init {
             frags[0] = InstructionFragment1()
-            frags[1] = InstructionFragment2()
-            frags[2] = InstructionFragment3()
+            frags[1] = InstructionFragment3()
+            frags[2] = InstructionFragment2()
             frags[3] = InstructionFragment4()
         }
 

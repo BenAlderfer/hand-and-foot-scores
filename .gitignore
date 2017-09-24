@@ -8,3 +8,5 @@ screens/
 build/
 *.iml
 local.properties
+debug/
+release/
