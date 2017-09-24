@@ -11,6 +11,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 import android.support.v4.view.ViewPager
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.util.Log
@@ -132,7 +133,7 @@ class ScoreActivity : AppCompatActivity() {
                 if (editTexts[tabNum] == null) {
                     saveEditTexts()
                 }
-                clearAll()
+                promptClear()
                 return true
             }
 
@@ -299,6 +300,19 @@ class ScoreActivity : AppCompatActivity() {
         }
 
         editTexts[tabNumber]?.get(0)?.requestFocus()
+    }
+
+    private fun promptClear() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(getString(R.string.clear_all_message))
+
+        builder.setPositiveButton(getString(R.string.clear_all_positive)) { _, _ ->
+            clearAll()
+        }
+        builder.setNegativeButton(getString(R.string.clear_all_negative), null)
+
+        val dialog = builder.create()
+        dialog.show()
     }
 
     /**
