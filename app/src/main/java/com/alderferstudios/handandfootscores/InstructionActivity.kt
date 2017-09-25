@@ -54,7 +54,6 @@ class InstructionActivity : AppCompatActivity() {
                 updateControls()
             }
         })
-
     }
 
     /**
@@ -119,19 +118,19 @@ class InstructionActivity : AppCompatActivity() {
      */
     private inner class Adapter(val context: Context) : PagerAdapter() {
 
-        private val layouts = arrayOfNulls<InstructionPage>(4)
+        private val layouts = arrayOfNulls<Int>(4)
 
         init {
-            layouts[0] = InstructionPage(getString(R.string.setup_title), R.layout.instruction_setup)
-            layouts[1] = InstructionPage(getString(R.string.objective_title), R.layout.instruction_objective)
-            layouts[2] = InstructionPage(getString(R.string.play_title), R.layout.instruction_play)
-            layouts[3] = InstructionPage(getString(R.string.scoring_title), R.layout.instruction_scoring)
+            layouts[0] = R.layout.instruction_setup
+            layouts[1] = R.layout.instruction_objective
+            layouts[2] = R.layout.instruction_play
+            layouts[3] = R.layout.instruction_scoring
         }
 
         override fun instantiateItem(collection: ViewGroup, position: Int): Any {
             val inflater = LayoutInflater.from(context)
             //defaults to main screen
-            val layout = inflater.inflate(layouts[position]?.resId ?:
+            val layout = inflater.inflate(layouts[position] ?:
                     R.layout.instruction_setup, collection, false) as ViewGroup
             collection.addView(layout)
             return layout
@@ -146,7 +145,7 @@ class InstructionActivity : AppCompatActivity() {
         }
 
         override fun getPageTitle(position: Int): CharSequence {
-            return layouts[position]?.title ?: getString(R.string.title_activity_instruction)
+            return getString(R.string.title_activity_instruction)
         }
 
         override fun getCount(): Int {
