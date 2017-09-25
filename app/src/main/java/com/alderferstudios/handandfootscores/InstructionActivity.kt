@@ -1,14 +1,15 @@
 package com.alderferstudios.handandfootscores
 
+import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
+import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 
@@ -45,8 +46,7 @@ class InstructionActivity : AppCompatActivity() {
         dots = findViewById(R.id.dots)
 
         viewPager = findViewById(R.id.instructionPager)
-        val adapter = Adapter(supportFragmentManager)
-        viewPager?.adapter = adapter
+        viewPager?.adapter = Adapter(this)
         viewPager?.addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener() {
             override fun onPageSelected(position: Int) {
                 viewPager?.currentItem = position
@@ -117,40 +117,40 @@ class InstructionActivity : AppCompatActivity() {
     /**
      * Custom adapter for the instructions
      */
-    private inner class Adapter
-    /**
-     * Makes an adapter with a FragmentManager
-     *
-     * @param fm the FragmentManager
-     */
-    (fm: FragmentManager) : FragmentPagerAdapter(fm) {
-        private val frags = arrayOfNulls<Fragment>(4)
+    private inner class Adapter(val context: Context) : PagerAdapter() {
+
+        private val layouts = arrayOfNulls<InstructionPage>(4)
 
         init {
-            frags[0] = InstructionFragment1()
-            frags[1] = InstructionFragment3()
-            frags[2] = InstructionFragment2()
-            frags[3] = InstructionFragment4()
+            layouts[0] = InstructionPage(getString(R.string.setup_title), R.layout.instruction_setup)
+            layouts[1] = InstructionPage(getString(R.string.objective_title), R.layout.instruction_objective)
+            layouts[2] = InstructionPage(getString(R.string.play_title), R.layout.instruction_play)
+            layouts[3] = InstructionPage(getString(R.string.scoring_title), R.layout.instruction_scoring)
         }
 
-        /**
-         * Gets the fragment and changes the Views
-         *
-         * @param position the slide number
-         * @return frag the same fragment regardless of position
-         * only the Views in the fragment change
-         */
-        override fun getItem(position: Int): Fragment {
-            return frags[position] ?: InstructionFragment1()
+        override fun instantiateItem(collection: ViewGroup, position: Int): Any {
+            val inflater = LayoutInflater.from(context)
+            //defaults to main screen
+            val layout = inflater.inflate(layouts[position]?.resId ?:
+                    R.layout.instruction_setup, collection, false) as ViewGroup
+            collection.addView(layout)
+            return layout
         }
 
-        /**
-         * Gets the number of slides
-         *
-         * @return the number of slides (4)
-         */
+        override fun destroyItem(collection: ViewGroup, position: Int, view: Any) {
+            collection.removeView(view as View)
+        }
+
+        override fun isViewFromObject(view: View, `object`: Any): Boolean {
+            return view === `object`
+        }
+
+        override fun getPageTitle(position: Int): CharSequence {
+            return layouts[position]?.title ?: getString(R.string.title_activity_instruction)
+        }
+
         override fun getCount(): Int {
-            return frags.size
+            return layouts.size
         }
     }
 }
