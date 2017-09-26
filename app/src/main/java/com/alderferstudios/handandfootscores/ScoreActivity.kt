@@ -52,7 +52,7 @@ class ScoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_score)
 
-        shared = PreferenceManager.getDefaultSharedPreferences(this)
+        initPrefs(this)
         resetPrefs(this, false)       //resets prefs only first time
         editor = shared?.edit()
 
@@ -100,6 +100,13 @@ class ScoreActivity : AppCompatActivity() {
 
             override fun onTabReselected(tab: TabLayout.Tab) {}
         })
+    }
+
+    /**
+     * Initializes shared preferences
+     */
+    fun initPrefs(context: Context) {
+        shared = PreferenceManager.getDefaultSharedPreferences(context)
     }
 
     /**
@@ -239,25 +246,25 @@ class ScoreActivity : AppCompatActivity() {
         val fourNineValue = Math.abs(Integer.parseInt(shared?.getString("fourNine", "5")))
         val numFourNines = editTexts[tabNum]?.get(6)?.text.toString()
         if (numFourNines != "") {
-            score += Integer.parseInt(numFourNines) * fourNineValue
+            score -= Integer.parseInt(numFourNines) * fourNineValue
         }
 
         val tenKingValue = Math.abs(Integer.parseInt(shared?.getString("tenKing", "10")))
         val numTenKings = editTexts[tabNum]?.get(7)?.text.toString()
         if (numTenKings != "") {
-            score += Integer.parseInt(numTenKings) * tenKingValue
+            score -= Integer.parseInt(numTenKings) * tenKingValue
         }
 
         val aceTwoValue = Math.abs(Integer.parseInt(shared?.getString("aceTwo", "20")))
         val numAceTwos = editTexts[tabNum]?.get(8)?.text.toString()
         if (numAceTwos != "") {
-            score += Integer.parseInt(numAceTwos) * aceTwoValue
+            score -= Integer.parseInt(numAceTwos) * aceTwoValue
         }
 
         val jokerValue = Math.abs(Integer.parseInt(shared?.getString("joker", "50")))
         val numJokers = editTexts[tabNum]?.get(9)?.text.toString()
         if (numJokers != "") {
-            score += Integer.parseInt(numJokers) * jokerValue
+            score -= Integer.parseInt(numJokers) * jokerValue
         }
 
         val numExtraPoints = editTexts[tabNum]?.get(10)?.text.toString()

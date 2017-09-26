@@ -14,13 +14,11 @@ import org.junit.runner.RunWith
 class ScoreActivityTest {
     private var activity: ScoreActivity? = null
     private var context: Context? = null
-    private var startedLooper = false
 
     @Before
     fun setup() {
-        if (!startedLooper) {
+        if (Looper.myLooper() == null) {
             Looper.prepare()    //needed before instantiating classes
-            startedLooper = true
         }
         context = InstrumentationRegistry.getTargetContext()
 
@@ -34,18 +32,19 @@ class ScoreActivityTest {
             et.setText("$i")
             etArray[i] = et
         }
-        activity!!.editTexts[0] = etArray
+        activity?.editTexts?.set(0, etArray)
 
+        activity?.initPrefs(context!!)
         activity?.resetPrefs(context!!, true)   //force reset prefs
     }
 
     @Test
     fun calcScoreBonus() {
-        assertEquals(6, activity?.calculateScore(300))
+        assertEquals(5100, activity?.calculateScore(300))
     }
 
     @Test
     fun calcScoreNoBonus() {
-        assertEquals(2, activity?.calculateScore(0))
+        assertEquals(4800, activity?.calculateScore(0))
     }
 }
