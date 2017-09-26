@@ -9,8 +9,8 @@ android {
         applicationId "com.alderferstudios.handandfootscores"
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 17
-        versionName "2.0.1"
+        versionCode 18
+        versionName "2.0.2"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
