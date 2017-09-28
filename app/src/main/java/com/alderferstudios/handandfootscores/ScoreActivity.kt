@@ -292,7 +292,7 @@ class ScoreActivity : AppCompatActivity() {
             Log.e("Update Fragment error", "Failed to update tab")
         }
 
-        temp?.getScrollView()?.fullScroll(ScrollView.FOCUS_UP)
+        temp?.scrollView?.fullScroll(ScrollView.FOCUS_UP)
     }
 
     /**
@@ -340,7 +340,7 @@ class ScoreActivity : AppCompatActivity() {
                     Log.e("Clear all error", "Failed to update tab")
                 }
 
-                temp?.getScrollView()?.fullScroll(ScrollView.FOCUS_UP)
+                temp?.scrollView?.fullScroll(ScrollView.FOCUS_UP)
                 editTexts[i]?.get(0)?.requestFocus()
             }
         }

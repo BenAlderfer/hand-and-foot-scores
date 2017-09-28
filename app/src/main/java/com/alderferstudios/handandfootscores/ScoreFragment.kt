@@ -2,7 +2,6 @@ package com.alderferstudios.handandfootscores
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +19,24 @@ import android.widget.ScrollView
 class ScoreFragment : Fragment() {
     var score: Int = 0
     var title: String? = null
+    var scrollView: ScrollView? = null
+    val ets = arrayOfNulls<EditText>(11)
+
+    init {
+        scrollView = view?.findViewById(R.id.scrollView)
+
+        ets[0] = view?.findViewById(R.id.numCleanBooks)
+        ets[1] = view?.findViewById(R.id.numDirtyBooks)
+        ets[2] = view?.findViewById(R.id.numCleanWildBooks)
+        ets[3] = view?.findViewById(R.id.numDirtyWildBooks)
+        ets[4] = view?.findViewById(R.id.numRedThrees)
+        ets[5] = view?.findViewById(R.id.numBlackThrees)
+        ets[6] = view?.findViewById(R.id.numFourNine)
+        ets[7] = view?.findViewById(R.id.numTenKing)
+        ets[8] = view?.findViewById(R.id.numAceTwo)
+        ets[9] = view?.findViewById(R.id.numJokers)
+        ets[10] = view?.findViewById(R.id.numExtraPoints)
+    }
 
     /**
      * Creates the activity
@@ -44,49 +61,6 @@ class ScoreFragment : Fragment() {
      */
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater?.inflate(R.layout.fragment_score, container, false)
-    }
-
-    /**
-     * Gets the EditTexts in this Fragment and returns them
-     *
-     * @return editTexts the array of EditTexts
-     */
-    val ets: Array<EditText?>
-        get() {
-            val ets = arrayOfNulls<EditText>(11)
-            try {
-                ets[0] = view?.findViewById(R.id.numCleanBooks)
-                ets[1] = view?.findViewById(R.id.numDirtyBooks)
-                ets[2] = view?.findViewById(R.id.numCleanWildBooks)
-                ets[3] = view?.findViewById(R.id.numDirtyWildBooks)
-                ets[4] = view?.findViewById(R.id.numRedThrees)
-                ets[5] = view?.findViewById(R.id.numBlackThrees)
-                ets[6] = view?.findViewById(R.id.numFourNine)
-                ets[7] = view?.findViewById(R.id.numTenKing)
-                ets[8] = view?.findViewById(R.id.numAceTwo)
-                ets[9] = view?.findViewById(R.id.numJokers)
-                ets[10] = view?.findViewById(R.id.numExtraPoints)
-            } catch (e: NullPointerException) {
-                Log.e("Get Ets error", "Failed to fetch views")
-            }
-
-            return ets
-        }
-
-    /**
-     * Gets the scroll view in this Fragment and returns it
-     *
-     * @return sv the scroll view
-     */
-    fun getScrollView(): ScrollView {
-        var sv = ScrollView(activity)
-        try {
-            sv = view?.findViewById(R.id.scrollView) ?: ScrollView(activity)
-        } catch (e: NullPointerException) {
-            Log.e("Get ScrollView error", "Failed to fetch scroll view")
-        }
-
-        return sv
     }
 
     /**
