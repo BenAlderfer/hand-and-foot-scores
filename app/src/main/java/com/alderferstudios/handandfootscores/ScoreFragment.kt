@@ -22,22 +22,6 @@ class ScoreFragment : Fragment() {
     var scrollView: ScrollView? = null
     val ets = arrayOfNulls<EditText>(11)
 
-    init {
-        scrollView = view?.findViewById(R.id.scrollView)
-
-        ets[0] = view?.findViewById(R.id.numCleanBooks)
-        ets[1] = view?.findViewById(R.id.numDirtyBooks)
-        ets[2] = view?.findViewById(R.id.numCleanWildBooks)
-        ets[3] = view?.findViewById(R.id.numDirtyWildBooks)
-        ets[4] = view?.findViewById(R.id.numRedThrees)
-        ets[5] = view?.findViewById(R.id.numBlackThrees)
-        ets[6] = view?.findViewById(R.id.numFourNine)
-        ets[7] = view?.findViewById(R.id.numTenKing)
-        ets[8] = view?.findViewById(R.id.numAceTwo)
-        ets[9] = view?.findViewById(R.id.numJokers)
-        ets[10] = view?.findViewById(R.id.numExtraPoints)
-    }
-
     /**
      * Creates the activity
      * saves the score, number, and title
@@ -61,6 +45,24 @@ class ScoreFragment : Fragment() {
      */
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater?.inflate(R.layout.fragment_score, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        scrollView = view?.findViewById(R.id.scrollView)
+
+        ets[0] = view?.findViewById(R.id.numCleanBooks)
+        ets[1] = view?.findViewById(R.id.numDirtyBooks)
+        ets[2] = view?.findViewById(R.id.numCleanWildBooks)
+        ets[3] = view?.findViewById(R.id.numDirtyWildBooks)
+        ets[4] = view?.findViewById(R.id.numRedThrees)
+        ets[5] = view?.findViewById(R.id.numBlackThrees)
+        ets[6] = view?.findViewById(R.id.numFourNine)
+        ets[7] = view?.findViewById(R.id.numTenKing)
+        ets[8] = view?.findViewById(R.id.numAceTwo)
+        ets[9] = view?.findViewById(R.id.numJokers)
+        ets[10] = view?.findViewById(R.id.numExtraPoints)
     }
 
     /**
