@@ -6,6 +6,7 @@
         android:defaultValue="500"
         android:inputType="number"
         android:key="cleanbook"
+        android:maxLength="4"
         android:summary="@string/clean_book_desc"
         android:title="@string/clean_book_label" />
 
@@ -13,6 +14,7 @@
         android:defaultValue="300"
         android:inputType="number"
         android:key="dirtybook"
+        android:maxLength="4"
         android:summary="@string/dirty_book_desc"
         android:title="@string/dirty_book_label" />
 
@@ -20,6 +22,7 @@
         android:defaultValue="1500"
         android:inputType="number"
         android:key="cleanwildbook"
+        android:maxLength="4"
         android:summary="@string/clean_wild_desc"
         android:title="@string/clean_wild_label" />
 
@@ -27,6 +30,7 @@
         android:defaultValue="1300"
         android:inputType="number"
         android:key="dirtywildbook"
+        android:maxLength="4"
         android:summary="@string/dirty_wild_desc"
         android:title="@string/dirty_wild_label" />
 
@@ -34,6 +38,7 @@
         android:defaultValue="300"
         android:inputType="number"
         android:key="redthree"
+        android:maxLength="4"
         android:summary="@string/red_three_desc"
         android:title="@string/red_three_label" />
 
@@ -41,6 +46,7 @@
         android:defaultValue="100"
         android:inputType="number"
         android:key="blackthree"
+        android:maxLength="4"
         android:summary="@string/black_three_desc"
         android:title="@string/black_three_label" />
 
