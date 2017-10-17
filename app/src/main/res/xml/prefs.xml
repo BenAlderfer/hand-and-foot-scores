@@ -6,6 +6,7 @@
         android:defaultValue="500"
         android:inputType="number"
         android:key="cleanBook"
+        android:maxLength="4"
         android:summary="@string/clean_book_desc"
         android:title="@string/clean_book_label" />
 
@@ -13,6 +14,7 @@
         android:defaultValue="300"
         android:inputType="number"
         android:key="dirtyBook"
+        android:maxLength="4"
         android:summary="@string/dirty_book_desc"
         android:title="@string/dirty_book_label" />
 
@@ -20,6 +22,7 @@
         android:defaultValue="1500"
         android:inputType="number"
         android:key="cleanWildBook"
+        android:maxLength="4"
         android:summary="@string/clean_wild_desc"
         android:title="@string/clean_wild_label" />
 
@@ -27,6 +30,7 @@
         android:defaultValue="1300"
         android:inputType="number"
         android:key="dirtyWildBook"
+        android:maxLength="4"
         android:summary="@string/dirty_wild_desc"
         android:title="@string/dirty_wild_label" />
 
@@ -34,6 +38,7 @@
         android:defaultValue="300"
         android:inputType="number"
         android:key="redThree"
+        android:maxLength="4"
         android:summary="@string/red_three_desc"
         android:title="@string/red_three_label" />
 
@@ -41,6 +46,7 @@
         android:defaultValue="100"
         android:inputType="number"
         android:key="blackThree"
+        android:maxLength="4"
         android:summary="@string/black_three_desc"
         android:title="@string/black_three_label" />
 
@@ -48,6 +54,7 @@
         android:defaultValue="5"
         android:inputType="number"
         android:key="fourNine"
+        android:maxLength="4"
         android:summary="@string/four_nine_desc"
         android:title="@string/four_nine_label" />
 
@@ -55,6 +62,7 @@
         android:defaultValue="10"
         android:inputType="number"
         android:key="tenKing"
+        android:maxLength="4"
         android:summary="@string/ten_king_desc"
         android:title="@string/ten_king_label" />
 
@@ -62,6 +70,7 @@
         android:defaultValue="20"
         android:inputType="number"
         android:key="aceTwo"
+        android:maxLength="4"
         android:summary="@string/ace_two_desc"
         android:title="@string/ace_two_label" />
 
@@ -69,6 +78,7 @@
         android:defaultValue="50"
         android:inputType="number"
         android:key="joker"
+        android:maxLength="4"
         android:summary="@string/joker_desc"
         android:title="@string/joker_label" />
 
@@ -76,6 +86,7 @@
         android:defaultValue="300"
         android:inputType="number"
         android:key="winBonus"
+        android:maxLength="4"
         android:summary="@string/win_desc"
         android:title="@string/win_label" />
 

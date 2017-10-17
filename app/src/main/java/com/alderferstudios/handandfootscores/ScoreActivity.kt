@@ -33,7 +33,7 @@ import android.widget.ScrollView
 class ScoreActivity : AppCompatActivity() {
     companion object {
         var shared: SharedPreferences? = null
-        protected var editor: SharedPreferences.Editor? = null
+        private var editor: SharedPreferences.Editor? = null
     }
 
     var tabNum: Int = 0
@@ -91,14 +91,16 @@ class ScoreActivity : AppCompatActivity() {
             }
         })
 
-        tabLayout?.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+        tabLayout?.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager?.currentItem = tab.position
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {}
 
-            override fun onTabReselected(tab: TabLayout.Tab) {}
+            override fun onTabReselected(tab: TabLayout.Tab) {
+                scrollToTop((adapter?.getItem(tab.position) as ScoreFragment).scrollView)
+            }
         })
     }
 
@@ -292,7 +294,11 @@ class ScoreActivity : AppCompatActivity() {
             Log.e("Update Fragment error", "Failed to update tab")
         }
 
-        temp?.scrollView?.fullScroll(ScrollView.FOCUS_UP)
+        tabLayout?.getTabAt(tabNum)?.select()
+    }
+
+    private fun scrollToTop(sv: ScrollView?) {
+        sv?.smoothScrollTo(0, 0)
     }
 
     /**
@@ -373,7 +379,7 @@ class ScoreActivity : AppCompatActivity() {
          * @return the fragment if it exists
          */
         override fun getItem(position: Int): Fragment? {
-            if (position < frags.size) {
+            if (position < getCount()) {
                 return frags[position]
             }
 
