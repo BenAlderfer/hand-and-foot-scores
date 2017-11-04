@@ -70,9 +70,9 @@ class InstructionActivity : AppCompatActivity() {
     /**
      * Goes to previous instruction
      *
-     * @param view the calling button
+     * @param v the calling button
      */
-    fun back(view: View) {
+    fun back(@Suppress("UNUSED_PARAMETER") v: View) {
         --slideNum
         updateControls()
         viewPager?.currentItem = slideNum
@@ -81,9 +81,9 @@ class InstructionActivity : AppCompatActivity() {
     /**
      * Advances the instruction
      *
-     * @param view the calling button
+     * @param v the calling button
      */
-    fun forward(view: View) {
+    fun forward(@Suppress("UNUSED_PARAMETER") v: View) {
         ++slideNum
         updateControls()
         viewPager?.currentItem = slideNum

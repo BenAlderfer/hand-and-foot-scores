@@ -189,14 +189,14 @@ class ScoreActivity : AppCompatActivity() {
     /**
      * Calculates the score with no bonus
      */
-    fun lostRound(v: View) {
+    fun lostRound(@Suppress("UNUSED_PARAMETER") v: View) {
         calculateScore(0)
     }
 
     /**
      * Calculates the score with the win bonus added
      */
-    fun wonRound(v: View) {
+    fun wonRound(@Suppress("UNUSED_PARAMETER") v: View) {
         calculateScore(Integer.parseInt(shared?.getString("winBonus", "300")))
     }
 
@@ -378,6 +378,7 @@ class ScoreActivity : AppCompatActivity() {
          * @param position the position of the fragment
          * @return the fragment if it exists
          */
+        @Suppress("UsePropertyAccessSyntax")
         override fun getItem(position: Int): Fragment? {
             if (position < getCount()) {
                 return frags[position]
