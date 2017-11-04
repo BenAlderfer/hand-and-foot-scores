@@ -111,15 +111,6 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
     open class PrefFrag : PreferenceFragment(), SharedPreferences.OnSharedPreferenceChangeListener {
 
         /**
-         * Creates the Fragment
-         *
-         * @param savedInstanceState the previous state
-         */
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-        }
-
-        /**
          * Sets the summaries on start
          */
         protected open fun setSummaries() {

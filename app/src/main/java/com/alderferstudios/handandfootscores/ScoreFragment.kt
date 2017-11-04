@@ -31,8 +31,8 @@ class ScoreFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        score = arguments.getInt("score", 0)
-        title = arguments.getString("title")
+        score = arguments?.getInt("score") ?: 0
+        title = arguments?.getString("title")
     }
 
     /**
@@ -43,8 +43,8 @@ class ScoreFragment : Fragment() {
      * @param savedInstanceState the previous state
      * @return the inflated View
      */
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater?.inflate(R.layout.fragment_score, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_score, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

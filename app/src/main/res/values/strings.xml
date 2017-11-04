@@ -95,7 +95,7 @@
 
     <!-- About strings -->
     <string name="appInfo">Hand And Foot Scores by Alderfer Studios</string>
-    <string name="version">Version: </string>
+    <string name="version">Version: %1$s</string>
     <string name="versionInfo">Version: 0.0.0</string>
     <string name="openSource">This app is open source. You can find it here: <a href="https://github.com/BenAlderfer/hand-and-foot-scores">https://github.com/BenAlderfer/hand-and-foot-scores</a></string>
     <string name="translate">If you would like to translate this app, please email <a href="mailto:alderferstudios@gmail.com">alderferstudios@gmail.com</a> with your request and I will send you instructions.\n\nIf you already know how to do this, you can edit the strings.xml (\\app\\src\\main\\res\\values) file in the source and send it to the above email.</string>

@@ -30,7 +30,7 @@ class AboutActivity : AppCompatActivity() {
         try {
             val pInfo = packageManager.getPackageInfo(packageName, 0)
             val version = pInfo.versionName
-            (findViewById<View>(R.id.version) as TextView).text = getString(R.string.version) + " $version"
+            (findViewById<View>(R.id.version) as TextView).text = getString(R.string.version, version)
         } catch (e: PackageManager.NameNotFoundException) {
             e.printStackTrace()
         }
