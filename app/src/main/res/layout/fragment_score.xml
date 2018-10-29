@@ -353,7 +353,7 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:gravity="center">
 
-            <android.support.v7.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/lostButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -366,7 +366,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/white" />
 
-            <android.support.v7.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/wonButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

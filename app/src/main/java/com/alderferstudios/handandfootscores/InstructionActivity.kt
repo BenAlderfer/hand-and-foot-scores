@@ -2,16 +2,14 @@ package com.alderferstudios.handandfootscores
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.view.PagerAdapter
-import android.support.v4.view.ViewPager
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 
 /**
  * Instructional activity
@@ -20,7 +18,7 @@ import android.widget.ImageView
  */
 class InstructionActivity : AppCompatActivity() {
     private var slideNum = 0
-    private var viewPager: ViewPager? = null
+    private var viewPager: androidx.viewpager.widget.ViewPager? = null
     private var backArrow: Button? = null
     private var forwardArrow: Button? = null
     private var dots: ImageView? = null
@@ -47,7 +45,7 @@ class InstructionActivity : AppCompatActivity() {
 
         viewPager = findViewById(R.id.instructionPager)
         viewPager?.adapter = Adapter(this)
-        viewPager?.addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener() {
+        viewPager?.addOnPageChangeListener(object : androidx.viewpager.widget.ViewPager.SimpleOnPageChangeListener() {
             override fun onPageSelected(position: Int) {
                 viewPager?.currentItem = position
                 slideNum = position
@@ -116,7 +114,7 @@ class InstructionActivity : AppCompatActivity() {
     /**
      * Custom adapter for the instructions
      */
-    private inner class Adapter(val context: Context) : PagerAdapter() {
+    private inner class Adapter(val context: Context) : androidx.viewpager.widget.PagerAdapter() {
 
         private val layouts = arrayOfNulls<Int>(4)
 
@@ -130,8 +128,8 @@ class InstructionActivity : AppCompatActivity() {
         override fun instantiateItem(collection: ViewGroup, position: Int): Any {
             val inflater = LayoutInflater.from(context)
             //defaults to main screen
-            val layout = inflater.inflate(layouts[position] ?:
-                    R.layout.instruction_setup, collection, false) as ViewGroup
+            val layout = inflater.inflate(layouts[position]
+                    ?: R.layout.instruction_setup, collection, false) as ViewGroup
             collection.addView(layout)
             return layout
         }

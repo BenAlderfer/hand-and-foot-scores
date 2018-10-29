@@ -6,20 +6,16 @@ import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.preference.PreferenceManager
-import android.support.design.widget.TabLayout
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
-import android.support.v4.view.ViewPager
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.ScrollView
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import com.google.android.material.tabs.TabLayout
 
 /**
  * Hand and Foot Scores
@@ -38,7 +34,7 @@ class ScoreActivity : AppCompatActivity() {
 
     var tabNum: Int = 0
     private var tabLayout: TabLayout? = null
-    private var viewPager: ViewPager? = null
+    private var viewPager: androidx.viewpager.widget.ViewPager? = null
     private var adapter: PagerAdapter? = null
 
     val editTexts = arrayOfNulls<Array<EditText?>>(4)                                                 //holds all the views, first dimension is tab number
@@ -362,7 +358,7 @@ class ScoreActivity : AppCompatActivity() {
      * @param fm   the FragmentManager
      * @param numTabs the number of tabs
      */
-    (fm: FragmentManager, private val numTabs: Int) : FragmentPagerAdapter(fm) {
+    (fm: androidx.fragment.app.FragmentManager, private val numTabs: Int) : androidx.fragment.app.FragmentPagerAdapter(fm) {
         private val frags: Array<ScoreFragment?> = arrayOfNulls(numTabs)
 
         init {
@@ -379,7 +375,7 @@ class ScoreActivity : AppCompatActivity() {
          * @return the fragment if it exists
          */
         @Suppress("UsePropertyAccessSyntax")
-        override fun getItem(position: Int): Fragment? {
+        override fun getItem(position: Int): androidx.fragment.app.Fragment? {
             if (position < getCount()) {
                 return frags[position]
             }
