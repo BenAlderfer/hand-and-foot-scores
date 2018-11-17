@@ -24,7 +24,6 @@ import com.google.android.material.tabs.TabLayout
  * Some things are public for testing
  *
  * @author Ben Alderfer
- * Alderfer Studios
  */
 class ScoreActivity : AppCompatActivity() {
     companion object {

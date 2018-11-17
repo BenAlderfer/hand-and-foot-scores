@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.viewpager.widget.PagerAdapter
 
 /**
  * Instructional activity
@@ -114,7 +115,7 @@ class InstructionActivity : AppCompatActivity() {
     /**
      * Custom adapter for the instructions
      */
-    private inner class Adapter(val context: Context) : androidx.viewpager.widget.PagerAdapter() {
+    private inner class Adapter(val context: Context) : PagerAdapter() {
 
         private val layouts = arrayOfNulls<Int>(4)
 

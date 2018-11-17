@@ -2,7 +2,6 @@ package com.alderferstudios.handandfootscores
 
 import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
-import android.content.res.Configuration
 import android.os.Bundle
 import android.preference.PreferenceFragment
 import android.preference.PreferenceManager
@@ -60,7 +59,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT
         }
 
-        if (!isLandscape()) {
+        if (!DeviceUtils.isLandscape(this)) {
             fragmentManager.beginTransaction()
                     .replace(R.id.framePort, PortraitFragment()).commit()
         } else {
@@ -91,18 +90,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
      * @param sharedPreferences the Shared Preferences
      * @param key               the preference that was changed
      */
-    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
-
-    }
-
-    /**
-     * Checks if the device is in landscape
-     *
-     * @return true if in landscape
-     */
-    private fun isLandscape(): Boolean {
-        return resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
-    }
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {}
 
     /**
      * The generic preference fragment class

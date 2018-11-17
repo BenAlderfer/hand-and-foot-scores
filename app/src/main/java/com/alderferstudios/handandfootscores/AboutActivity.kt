@@ -13,7 +13,6 @@ import androidx.appcompat.widget.Toolbar
  * About section of Hand and Foot Scores
  *
  * @author Ben Alderfer
- * Alderfer Studios
  */
 class AboutActivity : AppCompatActivity() {
 

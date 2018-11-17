@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ScrollView
+import androidx.fragment.app.Fragment
 
 /**
  * Hand and Foot Scores
@@ -13,9 +14,8 @@ import android.widget.ScrollView
  * Every tab contains one of these fragments
  *
  * @author Ben Alderfer
- * Alderfer Studios
  */
-class ScoreFragment : androidx.fragment.app.Fragment() {
+class ScoreFragment : Fragment() {
     var score: Int = 0
     var title: String? = null
     var scrollView: ScrollView? = null

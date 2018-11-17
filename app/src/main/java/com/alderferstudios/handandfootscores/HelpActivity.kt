@@ -12,7 +12,6 @@ import androidx.appcompat.widget.Toolbar
  * Help section of the Budget Splitter
  *
  * @author Ben Alderfer
- * Alderfer Studios
  */
 class HelpActivity : AppCompatActivity() {
 
